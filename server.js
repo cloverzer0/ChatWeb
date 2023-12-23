@@ -122,7 +122,10 @@ io.on('connection', function(socket) {
         break
       }
     }
-    let msg = username+ ":" + data
+    let msg = username + ":" + data
+    if(username === ''){
+      msg = data
+    }
     let array = []
     let str2 = ''
     for(let i=0; i<str.length; i++){
